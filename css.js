@@ -35,7 +35,7 @@ body {
 .pikachu {
     position: fixed;
     width: 100%;
-    // height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -43,9 +43,7 @@ body {
     // min-width: 320px;
     background-color: #EAD71C;
     min-height:50vh;
-    // height:50vh;
     // overflow: hidden;
-    padding-bottom:20px;
 }
 
 .bead1 {
@@ -154,7 +152,7 @@ body {
     background-color: #5D0B01;
     border-radius: 100%;
     border: 5px solid #000;
-    top: 138px;
+    top: 186px;
     /* left: 88px; */
     left: 50%;
     margin-left: -80px;
@@ -226,91 +224,4 @@ body {
 /* 这只皮卡丘送给你~ */
 `;
 
-// export default string;
-
-// import string from 'css.js'
-let n = 1
-
-const demo = document.querySelector('#demo')
-const demo2 = document.querySelector('#demo2')
-let id
-
-
-
-let time = 100
-
-
-
-const player = {
-    init: () => {
-        demo.innerText = string.substr(0, n)
-        demo2.innerHTML = string.substr(0, n)
-        player.play()
-        player.bindEvent()
-    },
-    bindEvent: () => {
-        const hashTable = {
-            '#btnPause': player.pause,
-            '#btnPlay': player.play,
-            '#btnSlow': player.slow,
-            '#btnNormal': player.normal,
-            '#btnFast': player.fast
-        }
-        for (let key in hashTable) {
-            document.querySelector(key).onclick = hashTable[key]
-        }
-    },
-    run: () => {
-        n += 1
-        var ims = document.querySelector('#im')
-        var ig = document.querySelector('#ig')
-        if (n > string.length) {
-            window.clearInterval(id);
-            ims.style.display = "block";
-            ig.style.display = "block";
-
-            return
-        }
-
-
-        // console.log(n + ':' + string.substr(0, n))
-        demo.innerText = string.substr(0, n)
-        demo2.innerHTML = string.substr(0, n)
-        demo.scrollTop = demo.scrollHeight
-        // console.log(n)
-    },
-    play: () => {
-        id = setInterval(player.run, time)
-    },
-
-    pause: () => {
-        window.clearInterval(id)
-    },
-    slow: () => {
-        player.pause()
-        time = 300
-        player.play()
-    },
-    normal: () => {
-        player.pause()
-        time = 100
-        player.play()
-    },
-    fast: () => {
-        player.pause()
-        time = 0
-        player.play()
-    }
-}
-
-player.init()
-
-
-
-
-
-// const x = () => {
-//     run()
-// }
-
-/* x和run是否等价 */
+export default string;

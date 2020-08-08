@@ -7,6 +7,15 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         #html1 {
             position: fixed;
             max-width: 640px;
@@ -22,6 +31,7 @@
         #demo {
             position: fixed;
             height: 200px;
+            /* height: 50vh; */
             top: 0;
             left: 0;
             width: 100%;
@@ -36,17 +46,44 @@
         #demo2 {
             display: none;
         }
+
+        #buttons {
+            position: fixed;
+            z-index: 10;
+            right: 0px;
+            top: 0px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #buttons>button {
+            margin-bottom: 10px;
+            padding: 3px 8px;
+        }
+
+        #im {
+            display: none;
+        }
+
+        #ig {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-
-
-
-
     <div id="html1">
         <div id="demo"></div>
         <style id="demo2"></style>
+        <div id="buttons">
+            <button id="btnPause">暂停</button>
+            <button id="btnPlay">播放</button>
+            <button id="btnSlow">慢速</button>
+            <button id="btnNormal">中速</button>
+            <button id="btnFast">快速</button>
+        </div>
         <div class="pikachu">
             <div class="bead1 clearfix">
                 <div class="eye left-eye">
@@ -56,10 +93,10 @@
             </div>
             <div class="yuan clearfix">
                 <div class="cheek left-cheek">
-                    <img src="1.gif" alt="">
+                    <img src="1.gif" alt="" id="im">
                 </div>
                 <div class="cheek right-cheek">
-                    <img src="1.gif" alt="">
+                    <img src="1.gif" alt="" id="ig">
                 </div>
             </div>
             <div class="body1">
@@ -79,6 +116,7 @@
 
 
     <script src="text.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
