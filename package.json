@@ -1,0 +1,16 @@
+{
+  "name": "Pikachu-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:liangjinjun/Pikachu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

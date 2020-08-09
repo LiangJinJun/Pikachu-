@@ -35,7 +35,7 @@ body {
 .pikachu {
     position: fixed;
     width: 100%;
-    // height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -43,9 +43,7 @@ body {
     // min-width: 320px;
     background-color: #EAD71C;
     min-height:50vh;
-    // height:50vh;
     // overflow: hidden;
-    padding-bottom:20px;
 }
 
 .bead1 {
@@ -225,6 +223,10 @@ body {
 }
 /* 这只皮卡丘送给你~ */
 `;
+
+
+// import string from './css'
+// console.log(1111)
 
 // export default string;
 

@@ -152,7 +152,7 @@ body {
     background-color: #5D0B01;
     border-radius: 100%;
     border: 5px solid #000;
-    top: 186px;
+    top: 138px;
     /* left: 88px; */
     left: 50%;
     margin-left: -80px;
@@ -224,4 +224,4 @@ body {
 /* 这只皮卡丘送给你~ */
 `;
 
-export default string;
+export default string
